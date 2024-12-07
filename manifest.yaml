@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: go-open
+  name: go-priv
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: go-open
+      app: go-priv
   template:
     metadata:
       labels:
-        app: go-open
+        app: go-priv
     spec:
       containers:
-      - name: go-open
-        image: ejosephodom/go-open:latest
+      - name: go-priv
+        image: ejosephodom/go-priv:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

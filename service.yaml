@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pod-service-go-priv
+spec:
+  selector:
+    app: go-priv
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
